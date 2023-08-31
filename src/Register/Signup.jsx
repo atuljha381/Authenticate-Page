@@ -29,10 +29,10 @@ export const Signup = (props) => {
   };
 
   return (
-    <div className={classes.authFormContainer}>
-      <h2>Register</h2>
+    <div id ="authFormContainer" className={classes.authFormContainer}>
+      <h2 id ="label">Register</h2>
       <form className={classes.registerForm}>
-        <label htmlFor="phone">Phone</label>
+        <label id ="label" htmlFor="phone">Phone</label>
         <input
           value={phone}
           type="tel"
@@ -42,21 +42,12 @@ export const Signup = (props) => {
           name="phone"
           onChange={(e) => setPhone(e.target.value)}
         />
-        <label htmlFor="password">Password</label>
-        <input
-          value={password}
-          type="password"
-          placeholder="********"
-          id="password"
-          name="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={signupByPhone}>Sign Up</button>
+      
+        <button onClick={signupByPhone} id ="link"><Link to={"/VerifyOtp"}>Verify OTP </Link></button>
+      
       </form>
 
-      <button className={classes.linkBtn}>
-        <Link to={"/login"}>Already have an account? Login here. </Link>
-      </button>
+     
     </div>
   );
 };
